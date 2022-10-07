@@ -4,7 +4,7 @@ addEventListener("fetch", event => {
   event.respondWith(handleRequest(event))
 })
 
-const CLOUD_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image`;
+const CLOUD_URL = `https://res.cloudinary.com/${CLOUD_NAME}`;
 
 async function serveAsset(event) {
   const url = new URL(event.request.url)
@@ -24,7 +24,6 @@ async function serveAsset(event) {
 }
 
 async function handleRequest(event) {
-  console.log('Requesting the image')
   if (event.request.method === "GET") {
     let response = await serveAsset(event)
     if (response.status > 399) {

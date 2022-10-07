@@ -1,4 +1,4 @@
-name = "images"
+name = "assets"
 type = "javascript"
 account_id = "6dbf4890a449c5d4223f2e19f099d358"
 workers_dev = true
@@ -6,5 +6,5 @@ vars = { ENVIRONMENT = "dev", CLOUD_NAME = "manifoldxyz" }
 [env.production]
 name = "cloudinary-proxy"
 vars = { ENVIRONMENT = "production", CLOUD_NAME = "manifoldxyz" }
-route = "images.manifold.xyz/*"
+route = "assets.manifold.xyz/*"
 zone_id = "d4184feac4ad3f6ca96b26036ad3a033"
