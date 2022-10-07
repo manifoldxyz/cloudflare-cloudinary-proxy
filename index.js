@@ -24,7 +24,7 @@ async function serveAsset(event) {
 }
 
 async function handleRequest(event) {
-  if (event.request.method === "GET") {
+  if (event.request.method === "GET" || event.request.method === 'HEAD') {
     let response = await serveAsset(event)
     if (response.status > 399) {
       response = new Response(response.statusText, { status: response.status })
